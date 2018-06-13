@@ -1,0 +1,27 @@
+<h2>Procesos Asincronos</h2>
+<hr>
+<button type="submit" class="btn btn-primary" [disabled]="loading"><i [ngClass]="{'fa-sync-alt fa-spin': loading, 'fa-hdd':!loading }" class="fas"> </i> 
+
+<span *ngIf="!loading">Guardar Cambios</span>
+<span *ngIf="loading">Por favor espere</span>
+
+</button>
+
+<div *ngIf="loading">
+    probando graficos
+</div>
+
+
+<div *ngIf="true">
+    <div style="display: block">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>
+
+<button>prueba</button>
+
+<div *ngIf="true">
+    <div style="display: block">
+        <canvas baseChart [data]="pieChartData" [colors]="lineChartColors" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>
